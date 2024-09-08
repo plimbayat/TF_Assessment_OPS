@@ -19,15 +19,12 @@ The following variables must be configured to deploy the VMs:
 - `vm_flavor`: The instance type or flavor of the VMs (e.g., `t2.micro` for AWS).
 - `vm_image`: The AMI ID or image ID for the VMs.
 
-### Example `terraform.tfvars` File
+###  variable format `terraform.tfvars` File
 
-```hcl
 vm_count  = 4
 vm_prefix = "demo-ec2"
 vm_flavor = ["t2.micro", "t2.micro", "t2.micro", "t2.micro"]
 vm_image  = ["ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85"]
-hcl```
-
 
 ###If you're deploying resources on AWS, configure your AWS CLI with your credentials:
 aws configure
