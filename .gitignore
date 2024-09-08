@@ -26,4 +26,4 @@ override.tf.json
 final_output.txt
 
 # Terraform lock file
-.terraform.lock.hcl
+.lock.hcl
