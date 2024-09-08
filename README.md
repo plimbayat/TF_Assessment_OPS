@@ -26,6 +26,8 @@ vm_count  = 4
 vm_prefix = "demo-ec2"
 vm_flavor = ["t2.micro", "t2.micro", "t2.micro", "t2.micro"]
 vm_image  = ["ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85"]
+```hcl
+
 
 ###If you're deploying resources on AWS, configure your AWS CLI with your credentials:
 aws configure
