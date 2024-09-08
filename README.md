@@ -28,11 +28,11 @@ vm_flavor = ["t2.micro", "t2.micro", "t2.micro", "t2.micro"]
 vm_image  = ["ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85"]
 
 
-•	VMs are created with specified flavors and images, and a unique SSH key is generated.
-•	A ping-check script is uploaded to each VM.
-•	Pings are performed in a round-robin manner between the VMs.
-•	Ping results are fetched from each VM and aggregated into a single file on the local machine.
-•	Final results are output as a Terraform output variable, displaying the connectivity between all VMs.
+•  VMs are created with specified flavors and images, and a unique SSH key is generated.
+•  A ping-check script is uploaded to each VM.
+•  Pings are performed in a round-robin manner between the VMs.
+•  Ping results are fetched from each VM and aggregated into a single file on the local machine.
+•  Final results are output as a Terraform output variable, displaying the connectivity between all VMs.
 
 
 ## If you're deploying resources on AWS, configure your AWS CLI with your credentials:
