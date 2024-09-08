@@ -1,6 +1,7 @@
 # Terraform files
 *.tfstate
 *.tfstate.*
+*.lock.hcl
 
 # Crash log files
 crash.log
@@ -22,3 +23,5 @@ override.tf.json
 *.key
 *.crt
 
+# Ping result
+final_output.txt
