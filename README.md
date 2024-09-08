@@ -21,32 +21,33 @@ The following variables must be configured to deploy the VMs:
 
 ###  variable format `terraform.tfvars` File
 
+```hcl
 vm_count  = 4
 vm_prefix = "demo-ec2"
 vm_flavor = ["t2.micro", "t2.micro", "t2.micro", "t2.micro"]
 vm_image  = ["ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85", "ami-0182f373e66f89c85"]
 
-###If you're deploying resources on AWS, configure your AWS CLI with your credentials:
+## If you're deploying resources on AWS, configure your AWS CLI with your credentials:
 aws configure
 
-###Before running Terraform, you need to initialize it. This will download the necessary provider plugins:
+##Before running Terraform, you need to initialize it. This will download the necessary provider plugins:
 terraform init
 
-###Plan the Deployment
+## Plan the Deployment
 terraform plan
 terraform apply OR if you want skip the "yes" option terraform apply -auto-approve
 
-###Round-Robin Ping Test
+## Round-Robin Ping Test
 After deploying the VMs, the Terraform script will automatically perform a round-robin ping test:
 
 VM 0 pings VM 1
 VM 1 pings VM 2
 VM 2 pings VM 0
 
-###The results of each ping (pass/fail) are recorded and aggregated into a single Terraform output variable.
+## The results of each ping (pass/fail) are recorded and aggregated into a single Terraform output variable.
 final_output.txt
 
-###To destroy the infrastructure and clean up all resources, run:
+## To destroy the infrastructure and clean up all resources, run:
 terraform destroy
 
 
